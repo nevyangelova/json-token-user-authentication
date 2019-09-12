@@ -17,8 +17,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "jsonwebtoken": "^8.2.2",
-    "sqlite3": "^4.0.0",
-    "whatwg-fetch": "1.0.0"
+    "sqlite3": "^4.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
