@@ -1,19 +1,18 @@
 {
-  "name": "vimcar-coding-challenge",
+  "name": "json-token-user-authentication",
   "version": "1.0.0",
   "description": "A small User API created for a coding challenge",
   "scripts": {
-    "start": "npm-run-all --parallel security-check load:db open:src lint",
+    "start": "npm-run-all --parallel load:db open:src lint",
     "load:db": "babel-node scripts/dbMigrate.js",
     "open:src": "babel-node scripts/srcServer.js",
     "lint": "esw webpack.config.* src scripts --color",
-    "security-check": "nsp check",
     "test": "mocha --reporter progress \"src/**/*.test.js\""
   },
   "author": "Nevyana Angelova",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/nevangelova/vimcar-coding-challenge"
+    "url": "https://github.com/nevyangelova/json-token-user-authentication"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,18 +21,21 @@
     "whatwg-fetch": "1.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "6.17.0",
-    "babel-loader": "6.2.5",
-    "babel-preset-latest": "6.16.0",
-    "babel-register": "6.16.3",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-stage-2": "^7.0.0",
     "chai": "3.5.0",
     "chalk": "1.1.3",
     "cheerio": "0.22.0",
     "cross-env": "3.1.3",
     "css-loader": "0.25.0",
     "eslint": "3.8.1",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
     "eslint-watch": "2.1.14",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "1.0.1",
