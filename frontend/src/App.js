@@ -1,25 +1,20 @@
 import React from "react";
-import logo from "./logo.svg";
+import styled, { createGlobalStyle } from "styled-components";
+import { EnhancedAccountForm } from "./Form";
+import img from "./background.png";
 
 function App() {
   return (
-    <div className="App">
+    <StyledApp>
       <GlobalStyle />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
-    </div>
+
+      <EnhancedAccountForm />
+    </StyledApp>
   );
 }
 
@@ -35,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-width: 200px;
   }
 
   code {
@@ -45,12 +41,14 @@ const GlobalStyle = createGlobalStyle`
 
 const StyledApp = styled.div`
   text-align: center;
-`;
-
-const AppLogo = styled.div`
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+  background: linear-gradient(
+      rgba(237, 74, 255, 0.5) 0%,
+      rgba(237, 74, 255, 0.5) 19%,
+      rgba(0, 128, 128, 0.5) 100%
+    ),
+    url(${img});
+  background-size: contain;
+  padding: 4rem;
 `;
 
 const Header = styled.div`
